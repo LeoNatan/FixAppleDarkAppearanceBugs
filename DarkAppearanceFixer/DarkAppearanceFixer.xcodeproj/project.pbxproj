@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3915D1B92322CE2600EDD97C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3915D1B82322CE2600EDD97C /* AppDelegate.m */; };
+		3915D1BC2322CE2600EDD97C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3915D1BB2322CE2600EDD97C /* ViewController.m */; };
+		3915D1BE2322CE2800EDD97C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3915D1BD2322CE2800EDD97C /* Assets.xcassets */; };
+		3915D1C12322CE2800EDD97C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3915D1BF2322CE2800EDD97C /* Main.storyboard */; };
+		3915D1C42322CE2800EDD97C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3915D1C32322CE2800EDD97C /* main.m */; };
+		3934F76F2322EC35008BC224 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3934F76E2322EC35008BC224 /* main.m */; };
+		3934F7782322EE49008BC224 /* com.LeoNatan.DarkAppearanceFixer.Helper in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3934F76C2322EC35008BC224 /* com.LeoNatan.DarkAppearanceFixer.Helper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		39DF5F2F2323096100A0B284 /* mach_inject_bundle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 39DF5F2B2323087700A0B284 /* mach_inject_bundle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3934F7752322EE1F008BC224 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3915D1AC2322CE2600EDD97C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3934F76B2322EC35008BC224;
+			remoteInfo = DarkAppearanceFixerHelper;
+		};
+		39DF5F2A2323087700A0B284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39DF5F252323087700A0B284 /* mach_inject_bundle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = mach_inject_bundle;
+		};
+		39DF5F2C2323094F00A0B284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39DF5F252323087700A0B284 /* mach_inject_bundle.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = mach_inject_bundle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3934F76A2322EC35008BC224 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		3934F7772322EE2A008BC224 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchServices;
+			dstSubfolderSpec = 1;
+			files = (
+				3934F7782322EE49008BC224 /* com.LeoNatan.DarkAppearanceFixer.Helper in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39DF5F2E2323095700A0B284 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				39DF5F2F2323096100A0B284 /* mach_inject_bundle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3915D1B42322CE2600EDD97C /* DarkAppearanceFixer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarkAppearanceFixer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3915D1B72322CE2600EDD97C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3915D1B82322CE2600EDD97C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3915D1BA2322CE2600EDD97C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3915D1BB2322CE2600EDD97C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3915D1BD2322CE2800EDD97C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3915D1C02322CE2800EDD97C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3915D1C22322CE2800EDD97C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3915D1C32322CE2800EDD97C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3915D1C52322CE2800EDD97C /* DarkAppearanceFixer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DarkAppearanceFixer.entitlements; sourceTree = "<group>"; };
+		3934F76C2322EC35008BC224 /* com.LeoNatan.DarkAppearanceFixer.Helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = com.LeoNatan.DarkAppearanceFixer.Helper; sourceTree = BUILT_PRODUCTS_DIR; };
+		3934F76E2322EC35008BC224 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3934F7732322ED37008BC224 /* DarkAppearanceFixerHelper-Launchd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DarkAppearanceFixerHelper-Launchd.plist"; sourceTree = "<group>"; };
+		3934F7742322ED37008BC224 /* DarkAppearanceFixerHelper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DarkAppearanceFixerHelper-Info.plist"; sourceTree = "<group>"; };
+		39DF5F102322FE2900A0B284 /* LNXPCProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LNXPCProtocol.h; sourceTree = "<group>"; };
+		39DF5F252323087700A0B284 /* mach_inject_bundle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mach_inject_bundle.xcodeproj; path = mach_override/mach_inject_bundle/mach_inject_bundle.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3915D1B12322CE2600EDD97C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3934F7692322EC35008BC224 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3915D1AB2322CE2600EDD97C = {
+			isa = PBXGroup;
+			children = (
+				39DF5F252323087700A0B284 /* mach_inject_bundle.xcodeproj */,
+				39DF5F0F2322FE1700A0B284 /* Shared */,
+				3915D1B62322CE2600EDD97C /* DarkAppearanceFixer */,
+				3934F76D2322EC35008BC224 /* DarkAppearanceFixerHelper */,
+				3915D1B52322CE2600EDD97C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3915D1B52322CE2600EDD97C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3915D1B42322CE2600EDD97C /* DarkAppearanceFixer.app */,
+				3934F76C2322EC35008BC224 /* com.LeoNatan.DarkAppearanceFixer.Helper */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3915D1B62322CE2600EDD97C /* DarkAppearanceFixer */ = {
+			isa = PBXGroup;
+			children = (
+				3915D1B72322CE2600EDD97C /* AppDelegate.h */,
+				3915D1B82322CE2600EDD97C /* AppDelegate.m */,
+				3915D1BA2322CE2600EDD97C /* ViewController.h */,
+				3915D1BB2322CE2600EDD97C /* ViewController.m */,
+				3915D1BD2322CE2800EDD97C /* Assets.xcassets */,
+				3915D1BF2322CE2800EDD97C /* Main.storyboard */,
+				3915D1C22322CE2800EDD97C /* Info.plist */,
+				3915D1C32322CE2800EDD97C /* main.m */,
+				3915D1C52322CE2800EDD97C /* DarkAppearanceFixer.entitlements */,
+			);
+			path = DarkAppearanceFixer;
+			sourceTree = "<group>";
+		};
+		3934F76D2322EC35008BC224 /* DarkAppearanceFixerHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3934F7742322ED37008BC224 /* DarkAppearanceFixerHelper-Info.plist */,
+				3934F7732322ED37008BC224 /* DarkAppearanceFixerHelper-Launchd.plist */,
+				3934F76E2322EC35008BC224 /* main.m */,
+			);
+			path = DarkAppearanceFixerHelper;
+			sourceTree = "<group>";
+		};
+		39DF5F0F2322FE1700A0B284 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				39DF5F102322FE2900A0B284 /* LNXPCProtocol.h */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		39DF5F262323087700A0B284 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39DF5F2B2323087700A0B284 /* mach_inject_bundle.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3915D1B32322CE2600EDD97C /* DarkAppearanceFixer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3915D1C82322CE2800EDD97C /* Build configuration list for PBXNativeTarget "DarkAppearanceFixer" */;
+			buildPhases = (
+				3915D1B02322CE2600EDD97C /* Sources */,
+				3915D1B12322CE2600EDD97C /* Frameworks */,
+				3915D1B22322CE2600EDD97C /* Resources */,
+				3934F7772322EE2A008BC224 /* CopyFiles */,
+				39DF5F2E2323095700A0B284 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				39DF5F2D2323094F00A0B284 /* PBXTargetDependency */,
+				3934F7762322EE1F008BC224 /* PBXTargetDependency */,
+			);
+			name = DarkAppearanceFixer;
+			productName = DarkAppearanceFixer;
+			productReference = 3915D1B42322CE2600EDD97C /* DarkAppearanceFixer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3934F76B2322EC35008BC224 /* DarkAppearanceFixerHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3934F7702322EC35008BC224 /* Build configuration list for PBXNativeTarget "DarkAppearanceFixerHelper" */;
+			buildPhases = (
+				3934F7682322EC35008BC224 /* Sources */,
+				3934F7692322EC35008BC224 /* Frameworks */,
+				3934F76A2322EC35008BC224 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DarkAppearanceFixerHelper;
+			productName = DarkAppearanceFixerHelper;
+			productReference = 3934F76C2322EC35008BC224 /* com.LeoNatan.DarkAppearanceFixer.Helper */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3915D1AC2322CE2600EDD97C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = LeoNatan;
+				TargetAttributes = {
+					3915D1B32322CE2600EDD97C = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					3934F76B2322EC35008BC224 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 3915D1AF2322CE2600EDD97C /* Build configuration list for PBXProject "DarkAppearanceFixer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				English,
+			);
+			mainGroup = 3915D1AB2322CE2600EDD97C;
+			productRefGroup = 3915D1B52322CE2600EDD97C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 39DF5F262323087700A0B284 /* Products */;
+					ProjectRef = 39DF5F252323087700A0B284 /* mach_inject_bundle.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				3915D1B32322CE2600EDD97C /* DarkAppearanceFixer */,
+				3934F76B2322EC35008BC224 /* DarkAppearanceFixerHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		39DF5F2B2323087700A0B284 /* mach_inject_bundle.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = mach_inject_bundle.framework;
+			remoteRef = 39DF5F2A2323087700A0B284 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3915D1B22322CE2600EDD97C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3915D1BE2322CE2800EDD97C /* Assets.xcassets in Resources */,
+				3915D1C12322CE2800EDD97C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3915D1B02322CE2600EDD97C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3915D1BC2322CE2600EDD97C /* ViewController.m in Sources */,
+				3915D1C42322CE2800EDD97C /* main.m in Sources */,
+				3915D1B92322CE2600EDD97C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3934F7682322EC35008BC224 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3934F76F2322EC35008BC224 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3934F7762322EE1F008BC224 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3934F76B2322EC35008BC224 /* DarkAppearanceFixerHelper */;
+			targetProxy = 3934F7752322EE1F008BC224 /* PBXContainerItemProxy */;
+		};
+		39DF5F2D2323094F00A0B284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = mach_inject_bundle;
+			targetProxy = 39DF5F2C2323094F00A0B284 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3915D1BF2322CE2800EDD97C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3915D1C02322CE2800EDD97C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3915D1C62322CE2800EDD97C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3915D1C72322CE2800EDD97C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3915D1C92322CE2800EDD97C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DarkAppearanceFixer/DarkAppearanceFixer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DarkAppearanceFixer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LeoNatan.DarkAppearanceFixer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3915D1CA2322CE2800EDD97C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DarkAppearanceFixer/DarkAppearanceFixer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DarkAppearanceFixer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LeoNatan.DarkAppearanceFixer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3934F7712322EC35008BC224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "DarkAppearanceFixerHelper/DarkAppearanceFixerHelper-Info.plist";
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"DarkAppearanceFixerHelper/DarkAppearanceFixerHelper-Info.plist",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"DarkAppearanceFixerHelper/DarkAppearanceFixerHelper-Launchd.plist",
+				);
+				PRODUCT_NAME = com.LeoNatan.DarkAppearanceFixer.Helper;
+			};
+			name = Debug;
+		};
+		3934F7722322EC35008BC224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "DarkAppearanceFixerHelper/DarkAppearanceFixerHelper-Info.plist";
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"DarkAppearanceFixerHelper/DarkAppearanceFixerHelper-Info.plist",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"DarkAppearanceFixerHelper/DarkAppearanceFixerHelper-Launchd.plist",
+				);
+				PRODUCT_NAME = com.LeoNatan.DarkAppearanceFixer.Helper;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3915D1AF2322CE2600EDD97C /* Build configuration list for PBXProject "DarkAppearanceFixer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3915D1C62322CE2800EDD97C /* Debug */,
+				3915D1C72322CE2800EDD97C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3915D1C82322CE2800EDD97C /* Build configuration list for PBXNativeTarget "DarkAppearanceFixer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3915D1C92322CE2800EDD97C /* Debug */,
+				3915D1CA2322CE2800EDD97C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3934F7702322EC35008BC224 /* Build configuration list for PBXNativeTarget "DarkAppearanceFixerHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3934F7712322EC35008BC224 /* Debug */,
+				3934F7722322EC35008BC224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3915D1AC2322CE2600EDD97C /* Project object */;
+}

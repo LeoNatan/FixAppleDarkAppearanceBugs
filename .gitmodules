@@ -1,0 +1,3 @@
+[submodule "DarkAppearanceFixer/mach_override"]
+	path = DarkAppearanceFixer/mach_override
+	url = https://github.com/LeoNatan/mach_inject.git
