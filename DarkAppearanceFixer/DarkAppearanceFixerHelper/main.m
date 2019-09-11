@@ -6,8 +6,9 @@
 //  Copyright © 2019 LeoNatan. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
 #import "LNXPCProtocol.h"
+#import "mach_inject_bundle.h"
 
 @interface LNHelper : NSObject <NSXPCListenerDelegate, LNXPCProtocol> @end
 @implementation LNHelper
@@ -30,9 +31,17 @@
 
 - (void)run
 {
+	[NSWorkspace.sharedWorkspace addObserver:self forKeyPath:@"runningApplications" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NULL];
+	
+	NSArray* bundleIdentifiers = @[@"com.apple.finder"]; // [NSUserDefaults.standardUserDefaults objectForKey:@"bundleIdentifiers"];
+	if(bundleIdentifiers)
+	{
+		[self startInjectingProcessesWithBundleIdentifiers:bundleIdentifiers];
+	}
+	
 	[_listener resume];
 	
-	dispatch_main();
+	[NSRunLoop.currentRunLoop run];
 }
 
 - (BOOL)listener:(NSXPCListener *)listener shouldAcceptNewConnection:(NSXPCConnection *)newConnection
@@ -44,11 +53,55 @@
 	return YES;
 }
 
-- (NSString*)startInjectingCodeBundleAtURL:(NSURL*)URL
+static NSMutableDictionary<NSString*, NSNumber*>* _trackedProcesses;
+
+- (void)startInjectingProcessesWithBundleIdentifiers:(NSArray<NSString *> *)bundleIdentifiers
 {
-	NSLog(@"");
+	NSMutableDictionary<NSString*, NSNumber*>* newProcesses = [NSMutableDictionary new];
 	
-	return @"asd";
+	[bundleIdentifiers enumerateObjectsUsingBlock:^(NSString * _Nonnull key, NSUInteger idx, BOOL * _Nonnull stop) {
+		id oldPid = _trackedProcesses[key] ?: @(-1);
+		newProcesses[key] = oldPid;
+	}];
+	
+	_trackedProcesses = newProcesses;
+	
+	[self _injectAvailableProcessesIfNeeded];
+	
+	[NSUserDefaults.standardUserDefaults setObject:bundleIdentifiers forKey:@"bundleIdentifiers"];
+}
+
+- (void)_injectAvailableProcessesIfNeeded
+{
+	NSMutableDictionary<NSString*, NSNumber*>* newProcesses = [_trackedProcesses mutableCopy];
+	
+	[_trackedProcesses enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSNumber * _Nonnull obj, BOOL * _Nonnull stop) {
+		NSRunningApplication* app = [NSRunningApplication runningApplicationsWithBundleIdentifier:key].firstObject;
+		pid_t pid = app ? app.processIdentifier : -1;
+		
+		if(pid != -1 && [obj isEqualToNumber:@(pid)] == NO)
+		{
+			mach_error_t err = mach_inject_bundle_pid("/usr/local/lib/libDarkAppearanceOverrides.dylib", pid);
+			NSLog(@"%@", @(err));
+		}
+		
+		newProcesses[key] = @(pid);
+	}];
+	
+	_trackedProcesses = newProcesses;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+	if([keyPath isEqualToString:@"runningApplications"] && change[NSKeyValueChangeNewKey])
+	{
+		NSRunningApplication* app = [change[NSKeyValueChangeNewKey] firstObject];
+		
+		if(_trackedProcesses[app.bundleIdentifier])
+		{
+			[self _injectAvailableProcessesIfNeeded];
+		}
+	}
 }
 
 @end

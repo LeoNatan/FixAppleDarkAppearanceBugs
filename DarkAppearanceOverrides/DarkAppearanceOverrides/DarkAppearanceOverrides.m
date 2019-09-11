@@ -14,18 +14,29 @@
 
 + (void)load
 {
+	Method m1 = class_getClassMethod(self.class, @selector(linkColor));
+	Method m2 = class_getClassMethod(self.class, @selector(__ln_linkColor));
+
+	method_exchangeImplementations(m1, m2);
+
 	if([NSBundle.mainBundle.bundleIdentifier isEqualToString:@"com.apple.AppStore"] ||
-	   [NSBundle.mainBundle.bundleIdentifier isEqualToString:@"com.apple.mail"])
+	   [NSBundle.mainBundle.bundleIdentifier isEqualToString:@"com.apple.mail"] ||
+	   [NSBundle.mainBundle.bundleIdentifier isEqualToString:@"com.apple.AddressBook"] ||
+	   [NSBundle.mainBundle.bundleIdentifier isEqualToString:@"com.apple.iChat"])
 	{
 		Method m1 = class_getClassMethod(self.class, @selector(systemBlueColor));
 		Method m2 = class_getClassMethod(self.class, @selector(__ln_systemBlueColor));
-		
+
 		method_exchangeImplementations(m1, m2);
 	}
-	//
 }
 
-+ (NSColor *)linkColor
++ (NSColor *)__ln_datumLabelPopupTextColor
+{
+	return NSColor.controlAccentColor;
+}
+
++ (NSColor *)__ln_linkColor
 {
 	return NSColor.controlAccentColor;
 }
@@ -47,9 +58,9 @@
 	{
 		return;
 	}
-	
+
 	Method m2 = class_getInstanceMethod(self.class, @selector(__ln_csk_imageTintedWithColor:));
-	
+
 	method_exchangeImplementations(m1, m2);
 }
 
@@ -65,11 +76,11 @@
 				{
 					[color setFill];
 				}
-				
+
 				NSRectFill(dstRect);
-				
+
 				[self drawInRect:dstRect fromRect:dstRect operation:NSCompositingOperationDestinationIn fraction:1.0];
-				
+
 				return YES;
 			}];
 }
@@ -80,9 +91,9 @@
 	{
 		return [self __ln_csk_imageTintedWithColor:color];
 	}
-	
+
 	return [self __ln_imageTintedWithColor:NSColor.controlAccentColor];
-	
+
 	//	self.template = YES;
 	//	return self;
 }
@@ -100,7 +111,7 @@
 		{
 			//🤦‍♂️ Apple is setting aqua appearance to the progress indicator.
 			Method m = class_getInstanceMethod(self.class, @selector(__ln_setAppearance:));
-			
+
 			class_addMethod(self.class, @selector(setAppearance:), method_getImplementation(m), method_getTypeEncoding(m));
 		}
 	});

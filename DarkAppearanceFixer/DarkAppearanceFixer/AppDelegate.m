@@ -14,14 +14,13 @@
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	// Insert code here to initialize your application
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+	NSURL* frameworkURL = [NSBundle.mainBundle URLForResource:@"mach_inject_bundle" withExtension:@"framework"];
+	NSURL* frameworkInUsrLocalLib = [[NSURL fileURLWithPath:@"/usr/local/lib"] URLByAppendingPathComponent:frameworkURL.lastPathComponent];
+	
+	[NSFileManager.defaultManager removeItemAtURL:frameworkInUsrLocalLib error:NULL];
+	[NSFileManager.defaultManager copyItemAtURL:frameworkURL toURL:frameworkInUsrLocalLib error:NULL];
 }
-
-
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-	// Insert code here to tear down your application
-}
-
 
 @end

@@ -48,7 +48,7 @@
 	connection.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(LNXPCProtocol)];
 	[connection resume];
 	
-	[connection.remoteObjectProxy startInjectingCodeBundleAtURL:[NSURL URLWithString:@"https://www.ynet.co.il"]];
+	[connection.remoteObjectProxy startInjectingProcessesWithBundleIdentifiers:@[@"com.apple.Safari"]];
 	
 	[connection invalidate];
 }

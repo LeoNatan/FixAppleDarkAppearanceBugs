@@ -10,6 +10,7 @@
 
 @protocol LNXPCProtocol <NSObject>
 
-- (NSString*)startInjectingCodeBundleAtURL:(NSURL*)URL;
+@required
+- (void)startInjectingProcessesWithBundleIdentifiers:(NSArray<NSString*>*)bundleIdentifiers;
 
 @end

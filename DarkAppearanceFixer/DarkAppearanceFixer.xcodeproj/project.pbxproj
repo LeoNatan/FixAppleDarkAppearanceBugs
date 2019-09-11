@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3914052B23291595009EE82C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3914052A23291595009EE82C /* AppKit.framework */; };
 		3915D1B92322CE2600EDD97C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3915D1B82322CE2600EDD97C /* AppDelegate.m */; };
 		3915D1BC2322CE2600EDD97C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3915D1BB2322CE2600EDD97C /* ViewController.m */; };
 		3915D1BE2322CE2800EDD97C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3915D1BD2322CE2800EDD97C /* Assets.xcassets */; };
@@ -14,7 +15,8 @@
 		3915D1C42322CE2800EDD97C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3915D1C32322CE2800EDD97C /* main.m */; };
 		3934F76F2322EC35008BC224 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3934F76E2322EC35008BC224 /* main.m */; };
 		3934F7782322EE49008BC224 /* com.LeoNatan.DarkAppearanceFixer.Helper in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3934F76C2322EC35008BC224 /* com.LeoNatan.DarkAppearanceFixer.Helper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		39DF5F2F2323096100A0B284 /* mach_inject_bundle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 39DF5F2B2323087700A0B284 /* mach_inject_bundle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		39DF5F3E232311F300A0B284 /* mach_inject_bundle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 39DF5F2B2323087700A0B284 /* mach_inject_bundle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		39DF5F3F2323123D00A0B284 /* mach_inject_bundle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DF5F2B2323087700A0B284 /* mach_inject_bundle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,14 @@
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = mach_inject_bundle;
 		};
-		39DF5F2C2323094F00A0B284 /* PBXContainerItemProxy */ = {
+		39DF5F3B232311E100A0B284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39DF5F252323087700A0B284 /* mach_inject_bundle.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = mach_inject_bundle;
+		};
+		39DF5F422323124600A0B284 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 39DF5F252323087700A0B284 /* mach_inject_bundle.xcodeproj */;
 			proxyType = 1;
@@ -61,19 +70,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		39DF5F2E2323095700A0B284 /* CopyFiles */ = {
+		39DF5F3D232311E900A0B284 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				39DF5F2F2323096100A0B284 /* mach_inject_bundle.framework in CopyFiles */,
+				39DF5F3E232311F300A0B284 /* mach_inject_bundle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3914052A23291595009EE82C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		3915D1B42322CE2600EDD97C /* DarkAppearanceFixer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarkAppearanceFixer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3915D1B72322CE2600EDD97C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3915D1B82322CE2600EDD97C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -104,6 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3914052B23291595009EE82C /* AppKit.framework in Frameworks */,
+				39DF5F3F2323123D00A0B284 /* mach_inject_bundle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +130,7 @@
 				3915D1B62322CE2600EDD97C /* DarkAppearanceFixer */,
 				3934F76D2322EC35008BC224 /* DarkAppearanceFixerHelper */,
 				3915D1B52322CE2600EDD97C /* Products */,
+				39DF5F3223230D0800A0B284 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +185,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		39DF5F3223230D0800A0B284 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3914052A23291595009EE82C /* AppKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,12 +204,12 @@
 				3915D1B12322CE2600EDD97C /* Frameworks */,
 				3915D1B22322CE2600EDD97C /* Resources */,
 				3934F7772322EE2A008BC224 /* CopyFiles */,
-				39DF5F2E2323095700A0B284 /* CopyFiles */,
+				39DF5F3D232311E900A0B284 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				39DF5F2D2323094F00A0B284 /* PBXTargetDependency */,
+				39DF5F3C232311E100A0B284 /* PBXTargetDependency */,
 				3934F7762322EE1F008BC224 /* PBXTargetDependency */,
 			);
 			name = DarkAppearanceFixer;
@@ -207,6 +228,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				39DF5F432323124600A0B284 /* PBXTargetDependency */,
 			);
 			name = DarkAppearanceFixerHelper;
 			productName = DarkAppearanceFixerHelper;
@@ -305,10 +327,15 @@
 			target = 3934F76B2322EC35008BC224 /* DarkAppearanceFixerHelper */;
 			targetProxy = 3934F7752322EE1F008BC224 /* PBXContainerItemProxy */;
 		};
-		39DF5F2D2323094F00A0B284 /* PBXTargetDependency */ = {
+		39DF5F3C232311E100A0B284 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = mach_inject_bundle;
-			targetProxy = 39DF5F2C2323094F00A0B284 /* PBXContainerItemProxy */;
+			targetProxy = 39DF5F3B232311E100A0B284 /* PBXContainerItemProxy */;
+		};
+		39DF5F432323124600A0B284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = mach_inject_bundle;
+			targetProxy = 39DF5F422323124600A0B284 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -471,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/mach_override/mach_inject_bundle\"";
 				INFOPLIST_FILE = "DarkAppearanceFixerHelper/DarkAppearanceFixerHelper-Info.plist";
 				OTHER_LDFLAGS = (
 					"-sectcreate",
@@ -483,6 +511,7 @@
 					"DarkAppearanceFixerHelper/DarkAppearanceFixerHelper-Launchd.plist",
 				);
 				PRODUCT_NAME = com.LeoNatan.DarkAppearanceFixer.Helper;
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -490,6 +519,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/mach_override/mach_inject_bundle\"";
 				INFOPLIST_FILE = "DarkAppearanceFixerHelper/DarkAppearanceFixerHelper-Info.plist";
 				OTHER_LDFLAGS = (
 					"-sectcreate",
@@ -502,6 +532,7 @@
 					"DarkAppearanceFixerHelper/DarkAppearanceFixerHelper-Launchd.plist",
 				);
 				PRODUCT_NAME = com.LeoNatan.DarkAppearanceFixer.Helper;
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
